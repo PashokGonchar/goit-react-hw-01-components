@@ -17,7 +17,7 @@ export const ThThead = styled.th`
 
 export const TrTbody = styled.tr`
   background-color: white;
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     background-color: rgb(236, 241, 244);
   }
 `;

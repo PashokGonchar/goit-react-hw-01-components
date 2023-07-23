@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   SectionCustom,
   TitleCustom,
@@ -25,3 +27,14 @@ const CreateStatistics = ({ title, stats }) => {
 };
 
 export default CreateStatistics;
+
+CreateStatistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
